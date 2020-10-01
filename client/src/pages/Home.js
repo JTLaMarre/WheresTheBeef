@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Jumbotron} from 'react-bootstrap';
+import Hero from '../components/Jumbotron/Jumbotron';
 
 class Home extends Component {
     render() {
         return (
             <section id="home">
-               
+               <Hero/>
                 
             </section>
         );
