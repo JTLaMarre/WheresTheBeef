@@ -1,22 +1,33 @@
-import React, { Component } from 'react';
-import  Navbar  from 'react-bootstrap/Navbar'
+import React from 'react';
+import * as ReactBootStrap from "react-bootstrap";
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
-class Nav extends Component {
-    render() {
-        return (
-            <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#report"></Nav.Link>
-               
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        );
-    }
+
+const NavBar = () => {
+    return(
+        <div className="Nav">
+   <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <ReactBootStrap.Navbar.Brand href="#home">WTB</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+    <ReactBootStrap.Nav className="mr-auto">
+      <ReactBootStrap.Nav.Link href="#products">Products</ReactBootStrap.Nav.Link>
+      <ReactBootStrap.Nav.Link href="#report">Report Products</ReactBootStrap.Nav.Link>
+
+    </ReactBootStrap.Nav>
+    <ReactBootStrap.Nav>
+      <ReactBootStrap.Nav.Link href="#store">Stores</ReactBootStrap.Nav.Link>
+      <ReactBootStrap.Nav.Link eventKey={2} href="#about">
+        About
+      </ReactBootStrap.Nav.Link>
+    </ReactBootStrap.Nav>
+  </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
+        </div>
+    )
 }
 
-export default Nav;
+export default NavBar;
