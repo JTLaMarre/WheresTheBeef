@@ -11,18 +11,18 @@ class Hero extends Component {
            <Jumbotron className="jumbo">
                <Container>
                    <Row>
-                       <Col lg={{ span: 6, offset: 6 }}>
+                       <Col lg={{ span: 12 }}>
                        <h1 >Where's the Beef</h1>
                        </Col>
                    </Row>
                    <Row>
-                       <Col lg={{ span: 6, offset: 6 }}>
+                       <Col lg={{ span: 6, offset: 3 }}>
                        <h3>Find out if your favourite item is in or out of stock</h3>
                        </Col>
                        
                    </Row>
                    <Row>
-                   <Col md={{ span:6, offset:12}}>
+                   <Col md={{ span:6, offset:6}}>
                    <i className="fas fa-chevron-down"></i>
                        </Col>
                    </Row>
