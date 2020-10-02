@@ -16,16 +16,21 @@
   margin-top: 1em;
 }
 .jumbo h3{
-  font: 30px/1.1em "opensans-bold", sans-serif;
+  font: 25px/1.1em "opensans-bold", sans-serif;
   color: rgb(173, 173, 173);
   letter-spacing: -2px;
   margin: 0 auto 18px auto;
   text-align: center;
 }
 .fa-chevron-down{
-  font-size:3em;
-  margin-left:11em;
+  font-size:4em;
+  text-align: center;
+  
 }
 .jumbo h4{
   font: 16px/1.1em "opensans-bold", sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+.fa-chevron-down { display: none; }
 }
