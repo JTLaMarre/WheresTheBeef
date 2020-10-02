@@ -26,6 +26,7 @@ class Hero extends Component {
                    <i className="fas fa-chevron-down"></i>
                        </Col>
                    </Row>
+                 
                </Container>
                
                
