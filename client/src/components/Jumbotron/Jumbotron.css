@@ -1,9 +1,11 @@
 .jumbo{
     height: 700px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    background-image: none;
+    background: #ffffff url(./beef.png) no-repeat top center;
+    background-size: cover !important;
+    z-index: 1;
 }
+
 .jumbo h1{
   font: 90px/1.1em "opensans-bold", sans-serif;
   color: #fff;
