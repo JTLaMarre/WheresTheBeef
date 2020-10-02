@@ -5,7 +5,7 @@ import Hero from '../components/Jumbotron/Jumbotron';
 class Home extends Component {
     render() {
         return (
-            <section id="home">
+            <section>
             
                <Hero/>
                 
