@@ -9,6 +9,11 @@ class Report extends Component {
         return (
             <section id="report">
             <Container>
+            <Row>
+            <Col lg={{ span: 11, offset: 1 }}>
+               <h1>Report Products</h1>
+               </Col>
+               </Row>
                 <ReportForm/>
             </Container>
             </section>
