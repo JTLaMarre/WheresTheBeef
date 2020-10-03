@@ -14,7 +14,7 @@ class StockList extends Component {
             <Card.Title>Store Name</Card.Title>
               <Card.Title>Product Name</Card.Title>
               <Card.Text>
-                Quantity: use map here 
+                Quantity: use state here?
               </Card.Text>
               <Button variant="primary">Out of Stock?</Button>
             </Card.Body>
