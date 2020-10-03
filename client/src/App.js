@@ -9,7 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import StockList from './components/Stock/stockList';
+import Stock from './pages/Stock/Stock';
 
 
 
@@ -30,7 +30,7 @@ function App() {
               <Report/>
           </Route>
           <Route exact path="/products" >
-              <StockList/>
+              <Stock/>
           </Route>
         </Switch>
     </Router>
