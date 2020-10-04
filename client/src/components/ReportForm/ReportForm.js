@@ -27,6 +27,14 @@ class ReportForm extends Component {
                 <Form.Control type="text" placeholder="Enter Store" style={{marginTop:'2em'}} />
               </Col>
             </Form.Group>
+            <Form.Group as={Row} controlId="formHorizontalEmail">
+              <Form.Label column sm={3}>
+                <div style={{marginLeft:'1em', marginTop:'2em'}}>Store Address</div>
+              </Form.Label>
+              <Col sm={8}>
+                <Form.Control type="text" placeholder="Enter Store Address" style={{marginTop:'2em'}} />
+              </Col>
+            </Form.Group>
           
             <Form.Group as={Row} controlId="formHorizontalPassword">
               <Form.Label column sm={3}>
