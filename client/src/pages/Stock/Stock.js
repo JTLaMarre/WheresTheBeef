@@ -14,7 +14,9 @@ class Stock extends Component {
                <h1>Products</h1>
                </Col>
                </Row>
+               <Row>
                 <StockList/>
+               </Row>
                 </Container>
             </section>
         );
