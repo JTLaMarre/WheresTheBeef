@@ -8,7 +8,7 @@ const oosSchema = new Schema({
     trim: true,
     required:true
   },
-  item: {
+  product: {
     type: String,
     trim:true,
     required:true

@@ -1,15 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form'
 import { Row, Container } from 'react-bootstrap';
 import { Col } from 'react-bootstrap'; 
 import {Button} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 import './ReportForm.css'
-class ReportForm extends Component {
-    render() {
+const ReportForm=()=>{
+ 
+const [store ,setStore]=useState('');
+const [storeAdrress , setStoreAddress]=useState('');
+const[product, setProduct]=useState('')
+
+    
+    const handleTest = () => { console.log(store)}
+  
+
+
+
+    
         return (
           <div >
             <Container>
+            <button onClick={handleTest} >test</button>
                 <Row>
                     <Col lg={{ span: 4, offset: 2 }}>
                         <Card
@@ -24,7 +36,7 @@ class ReportForm extends Component {
                 <div style={{marginLeft:'1em', marginTop:'2em'}}>Store</div>
               </Form.Label>
               <Col sm={8}>
-                <Form.Control type="text" placeholder="Enter Store" style={{marginTop:'2em'}} />
+                <Form.Control type="text" placeholder="Enter Store" style={{marginTop:'2em'}} value={store} onChange={e => setStore(e.target.value) } />
               </Col>
             </Form.Group>
             <Form.Group as={Row} controlId="formHorizontalEmail">
@@ -80,7 +92,7 @@ class ReportForm extends Component {
           </Container>
           </div>
         );
-    }
-}
+        }
+
 
 export default ReportForm;
