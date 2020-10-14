@@ -6,11 +6,12 @@ import {Button} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 import './ReportForm.css';
 import axios from 'axios';
+import { set } from 'mongoose';
 
 const ReportForm=()=>{
  
 const [store ,setStore]=useState('');
-const [storeAdrress , setStoreAddress]=useState('');
+const [storeAddress , setStoreAddress]=useState('');
 const[product, setProduct]=useState('')
 
     
@@ -21,10 +22,20 @@ const[product, setProduct]=useState('')
         console.log(`error: ${err}`)
       })
       
-      console.log(store)
+      console.log(`
+      store:${store}
+      storeAddress:${storeAddress}
+      product:${product}`)
     
     }
-  
+  const handleSubmit =(e)=>{
+    console.log(`
+    store:${store}
+    storeAddress:${storeAddress}
+    product:${product}`)
+
+    e.preventDefault()
+  }
 
 
 
@@ -55,7 +66,7 @@ const[product, setProduct]=useState('')
                 <div style={{marginLeft:'1em', marginTop:'2em'}}>Store Address</div>
               </Form.Label>
               <Col sm={8}>
-                <Form.Control type="text" placeholder="Enter Store Address" style={{marginTop:'2em'}} />
+                <Form.Control type="text" placeholder="Enter Store Address" style={{marginTop:'2em'}} value={storeAddress} onChange={e=>setStoreAddress(e.target.value)} />
               </Col>
             </Form.Group>
           
@@ -64,7 +75,7 @@ const[product, setProduct]=useState('')
                 <div style={{marginLeft:'1em'}}>Product</div>
               </Form.Label>
               <Col sm={8}>
-                <Form.Control type="text" placeholder="Enter Product" />
+                <Form.Control type="text" placeholder="Enter Product" value={product} onChange={e=>setProduct(e.target.value)} />
               </Col>
             </Form.Group>
             <fieldset>
@@ -93,7 +104,7 @@ const[product, setProduct]=useState('')
           
             <Form.Group as={Row}>
               <Col sm={{ span: 10, offset: 5 }}>
-                <Button type="submit">Submit</Button>
+                <Button type="submit" onClick={handleSubmit}>Submit</Button>
               </Col>
             </Form.Group>
           </Form>
