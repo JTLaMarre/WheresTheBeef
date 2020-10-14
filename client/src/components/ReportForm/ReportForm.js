@@ -4,7 +4,9 @@ import { Row, Container } from 'react-bootstrap';
 import { Col } from 'react-bootstrap'; 
 import {Button} from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
-import './ReportForm.css'
+import './ReportForm.css';
+import axios from 'axios';
+
 const ReportForm=()=>{
  
 const [store ,setStore]=useState('');
@@ -12,7 +14,16 @@ const [storeAdrress , setStoreAddress]=useState('');
 const[product, setProduct]=useState('')
 
     
-    const handleTest = () => { console.log(store)}
+    const handleTest = () => {
+      axios.get("/").then((res)=>{
+        console.log(res)
+      }).catch((err)=>{
+        console.log(`error: ${err}`)
+      })
+      
+      console.log(store)
+    
+    }
   
 
 
