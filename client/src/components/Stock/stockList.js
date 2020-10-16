@@ -16,8 +16,10 @@ class StockList extends Component {
             <Card.Text>
               {`${this.props.item} is out of stock`}
             </Card.Text>
+            <Button variant="info" style={{marginBottom:'5px'}}>Out of Stock</Button>
+            <br/>
             {/* button should delete items from list of out of stock items */}
-            <Button variant="primary">Click here if back in stock</Button>
+            <Button variant="primary">In Stock</Button>
           </Card.Body>
         </Card>
         {/* I think we will want to make a single component and map over it in tha app.js  */}
