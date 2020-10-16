@@ -78,28 +78,7 @@ const[product, setProduct]=useState('')
                 <Form.Control type="text" placeholder="Enter Product" value={product} onChange={e=>setProduct(e.target.value)} />
               </Col>
             </Form.Group>
-            <fieldset>
-              <Form.Group as={Row}>
-                <Form.Label as="legend" column sm={3}>
-                 <div style={{marginLeft:'1em'}}>Products In / Out of Stock</div>
-                </Form.Label>
-                <Col sm={8}>
-                  <Form.Check
-                    type="radio"
-                    label="In Stock"
-                    name="formHorizontalRadios"
-                    id="formHorizontalRadios1"
-                  />
-                  <Form.Check
-                    type="radio"
-                    label="Out of Stock"
-                    name="formHorizontalRadios"
-                    id="formHorizontalRadios2"
-                  />
-                  
-                </Col>
-              </Form.Group>
-            </fieldset>
+            
             
           
             <Form.Group as={Row}>
